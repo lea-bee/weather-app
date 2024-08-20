@@ -13,10 +13,10 @@ function cityDisplay(event) {
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = citySearched.value;
   let city = citySearched.value;
-  //let apiKey = "et9o12f3b1437b5dda065b3e80a5ef38";
-  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiKey = "et9o12f3b1437b5dda065b3e80a5ef38";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-  //axios.get(apiUrl).then(temperatureDisplay);
+  axios.get(apiUrl).then(temperatureDisplay);
 }
 
 let searchForm = document.querySelector("#search-form");
